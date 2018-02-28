@@ -173,4 +173,26 @@ class DetokenizerTest {
         assertTrue(detokenised.matches("["+ Pattern.quote(characterSet)+"]+"),"Verify only characters from character set returned");
         assertEquals(requiredLength,detokenised.length(),"Verify length of returned value is as required");
     }
+
+
+    @org.junit.jupiter.api.Test
+    void VerifyNestedTokens() {
+        String detokenised="<Not Set>";
+        try {
+            detokenised = Detokenizer.ProcessTokensInString("{random;digits;{random;from(456);1} }");
+        }
+        catch (Exception ex) {
+            assertTrue(false,"Exception calling [Detokenizer.ProcessTokensInString]: " + ex);
+        }
+
+        boolean canParseInteger=false;
+        try {
+            int dummy = Integer.parseInt(detokenised);
+            canParseInteger=true;
+        }
+        catch (Exception ex) {}
+
+        assertTrue(!(detokenised.length()<4) && !(detokenised.length()>6) && canParseInteger,"Verify digits of length between 4 and 6");
+    }
+
 }

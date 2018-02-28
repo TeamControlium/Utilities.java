@@ -187,7 +187,7 @@ public class Detokenizer {
             // {random,from(ASDF),5} - 5 characters selected from ASDF
             if (verb.startsWith("from("))
             {
-                select = typeAndLengthOrFormat[0].trim().substring(verb.indexOf('(') + 1, verb.length() - 2 - verb.indexOf('('));
+                select = typeAndLengthOrFormat[0].trim().substring(verb.indexOf('(') + 1, verb.length() - 2);
             }
             else
             {
@@ -225,7 +225,9 @@ public class Detokenizer {
             }
             int number;
             try {
-                number = Integer.parseInt(typeAndLengthOrFormat[1]);
+                int lastDigit=0;
+                while (lastDigit < typeAndLengthOrFormat[1].length() && Character.isDigit(typeAndLengthOrFormat[1].charAt(lastDigit))) lastDigit++;
+                number = Integer.parseInt(typeAndLengthOrFormat[1].substring(0,lastDigit));
             }
             catch (Exception ex) {
                 throw new Exception("Invalid number of characters in Random token {{random;<type>;<length>}}");
