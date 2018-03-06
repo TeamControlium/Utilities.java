@@ -189,4 +189,32 @@ class GeneralTest {
         }
         assertEquals("Start bold more isCode(). More bold stuff bold with' apostrophe mylink then more text is == used. And more S.t.u.ff. And final",response,"Text in complex HTML returned correctly");
     }
+
+    @org.junit.jupiter.api.Test
+    void GetTextFromHTMLEmpty() {
+
+        String html = "";
+        String response = "<Not set>";
+        try {
+            response = General.GetTextFromHTML(html);
+        }
+        catch (Exception ex) {
+            assertFalse(true,"Exception must not be thrown");
+        }
+        assertEquals("",response,"Text in empty HTML returned correctly");
+    }
+
+    @org.junit.jupiter.api.Test
+    void GetTextFromHTMLNull() {
+
+        String html = null;
+        String response = "<Not set>";
+        try {
+            response = General.GetTextFromHTML(html);
+        }
+        catch (Exception ex) {
+            assertFalse(true,"Exception must not be thrown");
+        }
+        assertNull(response,"Null text returned correctly");
+    }
 }

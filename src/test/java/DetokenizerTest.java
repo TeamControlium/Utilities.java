@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.function.BiFunction;
 import java.util.regex.Pattern;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -194,5 +195,60 @@ class DetokenizerTest {
 
         assertTrue(!(detokenised.length()<4) && !(detokenised.length()>6) && canParseInteger,"Verify digits of length between 4 and 6");
     }
+
+    public static String CustomOverride(String delimiter,String[] token) {
+        return String.format("Got delimiter [%s], token [%s]",delimiter,String.join("+",token));
+    }
+
+
+    @org.junit.jupiter.api.Test
+    void VerifyCustomOverride() {
+
+        Detokenizer.setCustomTokenProcessor(DetokenizerTest::CustomOverride);
+
+        String detokenised="<Not Set>";
+        int requiredLength = 20;
+        try {
+            detokenised = Detokenizer.ProcessTokensInString("{random;letters;20}");
+        }
+        catch (Exception ex) {
+            assertTrue(false,"Exception calling [Detokenizer.ProcessTokensInString]: " + ex);
+        }
+
+        assertEquals("Got delimiter [;], token [random+letters;20]",detokenised,"Verify customer was called correctly");
+    }
+
+    @org.junit.jupiter.api.Test
+    void VerifyTempCustomOverride() {
+
+        Detokenizer.setCustomTokenProcessor(DetokenizerTest::CustomOverride);
+
+        String detokenised="<Not Set>";
+        int requiredLength = 20;
+        try {
+            detokenised = Detokenizer.ProcessTokensInString("{random;letters;20}");
+        }
+        catch (Exception ex) {
+            assertTrue(false,"Exception calling [Detokenizer.ProcessTokensInString]: " + ex);
+        }
+
+        assertEquals("Got delimiter [;], token [random+letters;20]",detokenised,"Verify customer was called correctly");
+
+        Detokenizer.setCustomTokenProcessor(null);
+
+        try {
+            detokenised = Detokenizer.ProcessTokensInString("{random;letters;"+ Integer.toString(requiredLength)+"}");
+        }
+        catch (Exception ex) {
+            assertTrue(false,"Exception calling [Detokenizer.ProcessTokensInString]: " + ex);
+        }
+
+
+        assertTrue(detokenised.matches("[a-zA-Z]+"),"Verify only letters returned");
+        assertEquals(requiredLength,detokenised.length(),"Verify length of returned value is as required");
+
+
+    }
+
 
 }

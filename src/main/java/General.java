@@ -98,6 +98,7 @@ public class General {
     /// <param name="HtmlData">HTML containing text</param>
     /// <returns>Text with HTML stripped out</returns>
     public static String GetTextFromHTML(String HtmlData) throws Exception {
+        if (HtmlData==null) return null;
         Document htmlDoc =  Jsoup.parse(HtmlData);
 
         return htmlDoc.body().text();
