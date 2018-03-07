@@ -13,6 +13,8 @@ class DetokenizerTest {
 
     @BeforeEach
     void setUp() {
+        // Ensure custom processor, if wired up, is torn down.
+        Detokenizer.setCustomTokenProcessor(null);
     }
 
     @AfterEach
@@ -122,8 +124,8 @@ class DetokenizerTest {
         }
 
 
-        assertTrue(detokenised.matches("[a-zA-Z]+"),"Verify only letters returned");
-        assertEquals(requiredLength,detokenised.length(),"Verify length of returned value is as required");
+        assertTrue(detokenised.matches("[a-zA-Z]+"),String.format("Verify only letters returned.  Got [%s]",detokenised));
+        assertEquals(requiredLength,detokenised.length(),String.format("Verify length of returned value is as required. Got [%d], expected [%d].",detokenised.length(),requiredLength));
     }
 
     @org.junit.jupiter.api.Test
@@ -214,7 +216,6 @@ class DetokenizerTest {
         catch (Exception ex) {
             assertTrue(false,"Exception calling [Detokenizer.ProcessTokensInString]: " + ex);
         }
-
         assertEquals("Got delimiter [;], token [random+letters;20]",detokenised,"Verify customer was called correctly");
     }
 
