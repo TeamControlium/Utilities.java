@@ -1,10 +1,12 @@
+package TeamControlium.Utilities.Test;
+
+import TeamControlium.Utilities.Detokenizer;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.function.BiFunction;
 import java.util.regex.Pattern;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -28,7 +30,7 @@ class DetokenizerTest {
              detokenised = Detokenizer.ProcessTokensInString("{date;today;dd/MM/yyyy}");
         }
         catch (Exception ex) {
-            assertTrue(false,"Exception calling [Detokenizer.ProcessTokensInString]: " + ex);
+            assertTrue(false,"Exception calling [TeamControlium.Utilities.Detokenizer.ProcessTokensInString]: " + ex);
         }
         Date dt = new Date();
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
@@ -42,7 +44,7 @@ class DetokenizerTest {
             detokenised = Detokenizer.ProcessTokensInString("{date;yesterday;dd/MM/yyyy}");
         }
         catch (Exception ex) {
-            assertTrue(false,"Exception calling [Detokenizer.ProcessTokensInString]: " + ex);
+            assertTrue(false,"Exception calling [TeamControlium.Utilities.Detokenizer.ProcessTokensInString]: " + ex);
         }
 
         final Calendar cal = Calendar.getInstance();
@@ -65,7 +67,7 @@ class DetokenizerTest {
             detokenised = Detokenizer.ProcessTokensInString("{random;date(" + startDate + "," + endDate + ");dd/MM/yyyy}");
         }
         catch (Exception ex) {
-            assertTrue(false,"Exception calling [Detokenizer.ProcessTokensInString]: " + ex);
+            assertTrue(false,"Exception calling [TeamControlium.Utilities.Detokenizer.ProcessTokensInString]: " + ex);
         }
 
         Date returnedDate=null;
@@ -73,7 +75,7 @@ class DetokenizerTest {
              returnedDate = returnedDateFormat.parse(detokenised);
         }
         catch (Exception ex) {
-            assertTrue(false,"Exception parsing [Detokenizer.ProcessTokensInString] returned date [" + detokenised + "]: " + ex);
+            assertTrue(false,"Exception parsing [TeamControlium.Utilities.Detokenizer.ProcessTokensInString] returned date [" + detokenised + "]: " + ex);
         }
 
         Date startDateDate=null;
@@ -98,7 +100,7 @@ class DetokenizerTest {
             detokenised = Detokenizer.ProcessTokensInString("{random;digits;"+ Integer.toString(requiredLength)+"}");
         }
         catch (Exception ex) {
-            assertTrue(false,"Exception calling [Detokenizer.ProcessTokensInString]: " + ex);
+            assertTrue(false,"Exception calling [TeamControlium.Utilities.Detokenizer.ProcessTokensInString]: " + ex);
         }
 
         boolean canParseInteger=false;
@@ -120,7 +122,7 @@ class DetokenizerTest {
             detokenised = Detokenizer.ProcessTokensInString("{random;letters;"+ Integer.toString(requiredLength)+"}");
         }
         catch (Exception ex) {
-            assertTrue(false,"Exception calling [Detokenizer.ProcessTokensInString]: " + ex);
+            assertTrue(false,"Exception calling [TeamControlium.Utilities.Detokenizer.ProcessTokensInString]: " + ex);
         }
 
 
@@ -136,7 +138,7 @@ class DetokenizerTest {
             detokenised = Detokenizer.ProcessTokensInString("{random;UpperCaseLetters;"+ Integer.toString(requiredLength)+"}");
         }
         catch (Exception ex) {
-            assertTrue(false,"Exception calling [Detokenizer.ProcessTokensInString]: " + ex);
+            assertTrue(false,"Exception calling [TeamControlium.Utilities.Detokenizer.ProcessTokensInString]: " + ex);
         }
 
 
@@ -152,7 +154,7 @@ class DetokenizerTest {
             detokenised = Detokenizer.ProcessTokensInString("{random;LowerCaseLetters;"+ Integer.toString(requiredLength)+"}");
         }
         catch (Exception ex) {
-            assertTrue(false,"Exception calling [Detokenizer.ProcessTokensInString]: " + ex);
+            assertTrue(false,"Exception calling [TeamControlium.Utilities.Detokenizer.ProcessTokensInString]: " + ex);
         }
 
 
@@ -169,7 +171,7 @@ class DetokenizerTest {
             detokenised = Detokenizer.ProcessTokensInString("{random;from("+characterSet+");"+ Integer.toString(requiredLength)+"}");
         }
         catch (Exception ex) {
-            assertTrue(false,"Exception calling [Detokenizer.ProcessTokensInString]: " + ex);
+            assertTrue(false,"Exception calling [TeamControlium.Utilities.Detokenizer.ProcessTokensInString]: " + ex);
         }
 
 
@@ -185,7 +187,7 @@ class DetokenizerTest {
             detokenised = Detokenizer.ProcessTokensInString("{random;digits;{random;from(456);1} }");
         }
         catch (Exception ex) {
-            assertTrue(false,"Exception calling [Detokenizer.ProcessTokensInString]: " + ex);
+            assertTrue(false,"Exception calling [TeamControlium.Utilities.Detokenizer.ProcessTokensInString]: " + ex);
         }
 
         boolean canParseInteger=false;
@@ -214,7 +216,7 @@ class DetokenizerTest {
             detokenised = Detokenizer.ProcessTokensInString("{random;letters;20}");
         }
         catch (Exception ex) {
-            assertTrue(false,"Exception calling [Detokenizer.ProcessTokensInString]: " + ex);
+            assertTrue(false,"Exception calling [TeamControlium.Utilities.Detokenizer.ProcessTokensInString]: " + ex);
         }
         assertEquals("Got delimiter [;], token [random+letters;20]",detokenised,"Verify customer was called correctly");
     }
@@ -230,7 +232,7 @@ class DetokenizerTest {
             detokenised = Detokenizer.ProcessTokensInString("{random;letters;20}");
         }
         catch (Exception ex) {
-            assertTrue(false,"Exception calling [Detokenizer.ProcessTokensInString]: " + ex);
+            assertTrue(false,"Exception calling [TeamControlium.Utilities.Detokenizer.ProcessTokensInString]: " + ex);
         }
 
         assertEquals("Got delimiter [;], token [random+letters;20]",detokenised,"Verify customer was called correctly");
@@ -241,7 +243,7 @@ class DetokenizerTest {
             detokenised = Detokenizer.ProcessTokensInString("{random;letters;"+ Integer.toString(requiredLength)+"}");
         }
         catch (Exception ex) {
-            assertTrue(false,"Exception calling [Detokenizer.ProcessTokensInString]: " + ex);
+            assertTrue(false,"Exception calling [TeamControlium.Utilities.Detokenizer.ProcessTokensInString]: " + ex);
         }
 
 

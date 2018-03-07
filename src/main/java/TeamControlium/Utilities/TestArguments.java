@@ -1,3 +1,5 @@
+package TeamControlium.Utilities;
+
 import java.util.HashMap;
 import java.util.regex.Pattern;
 

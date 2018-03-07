@@ -1,6 +1,6 @@
-import java.util.Dictionary;
+package TeamControlium.Utilities;
+
 import java.util.HashMap;
-import java.util.Map;
 
 public final class TestData {
     private static HashMap<String, HashMap<String, ? super Object>> testData = new HashMap<>();

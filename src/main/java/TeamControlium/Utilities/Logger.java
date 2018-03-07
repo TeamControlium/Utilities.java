@@ -1,4 +1,5 @@
-import org.apache.commons.lang3.time.StopWatch;
+package TeamControlium.Utilities;
+
 import org.apache.commons.io.FilenameUtils;
 import java.io.File;
 import java.nio.charset.Charset;
@@ -15,11 +16,11 @@ import java.util.function.Consumer;
 /// is possible.<br/>
 /// Debug text redirection is possible if underlying tool supplies its own logging and/or debug output, wired up
 /// to and is set to false.
-/// The timestamp, shown on every line of the log output, is reset on the first call to the Logger.
+/// The timestamp, shown on every line of the log output, is reset on the first call to the TeamControlium.Utilities.Logger.
 /// </summary>
 public final class Logger {
     private boolean errorWrittenToEventLog;
-    private Date testTimer;         // Used to keep track of time since first call to Logger class made.
+    private Date testTimer;         // Used to keep track of time since first call to TeamControlium.Utilities.Logger class made.
     private HashMap<Long, String> testToolStrings;       // Used to build string-per-thread as logger Write calls made
     static private Logger _Logger;
 
@@ -103,7 +104,7 @@ public final class Logger {
     /// <summary>
     /// Appends text to currently active line and writes line to active log.  If new line, text is pre-pended with Line header information
     /// </summary>
-    /// MethodBase of class calling Logger class
+    /// MethodBase of class calling TeamControlium.Utilities.Logger class
     /// Level of debug text to be written
     /// Text string to be written
     /// <remarks>Text is written if TypeOfWrite is equal to, or higher the current Logging Level</remarks>
@@ -166,7 +167,7 @@ public final class Logger {
 //                                        "");
 //                            }
 //                            appLog.Source = "Application";
-//                            appLog.WriteEntry(string.Format("AppServiceInterfaceMock - Logger error writing to {0}.\r\n\r\n" +
+//                            appLog.WriteEntry(string.Format("AppServiceInterfaceMock - TeamControlium.Utilities.Logger error writing to {0}.\r\n\r\n" +
 //                                    "Attempt to write line;\r\n" +
 //                                    "{1}\r\n\r\n" +
 //                                    "No further log writes to event log will happen in this session", details, textToWrite, ex), EventLogEntryType.Warning, 12791, 1);
@@ -270,7 +271,7 @@ public final class Logger {
     /// <remarks>
     /// If current error logging level is FrameworkDebug the full
     /// exception is written, including stacktrace etc.<br/>
-    /// With any other Log Level only the exception message is written. If an exception is thrown during write, Logger
+    /// With any other Log Level only the exception message is written. If an exception is thrown during write, TeamControlium.Utilities.Logger
     /// attempts to write the error details if able.
     /// </remarks>
     static public void LogException(Exception ex)
@@ -293,7 +294,7 @@ public final class Logger {
     /// <remarks>
     /// If current error logging level is FrameworkDebug the full
     /// exception is written, including stacktrace etc.<br/>
-    /// With any other Log Level only the exception message is writteIf an exception is thrown during write, Logger
+    /// With any other Log Level only the exception message is writteIf an exception is thrown during write, TeamControlium.Utilities.Logger
     /// attempts to write the error details if able.
     /// </remarks>
     static public void LogException(Exception ex, String text, Object... args)
@@ -327,7 +328,7 @@ public final class Logger {
 
     /// <summary>
     /// Writes a line of data to the active debug log.
-    /// Data can be formatted in the standard string.format syntax.  If an exception is thrown during write, Logger
+    /// Data can be formatted in the standard string.format syntax.  If an exception is thrown during write, TeamControlium.Utilities.Logger
     /// attempts to write the error deatils if able.
     /// </summary>
     static public void WriteLine(LogLevels logLevel, String textString, Object... args)
@@ -344,7 +345,7 @@ public final class Logger {
     /// overwriting.
     /// </summary>
     /// <remarks>
-    /// No exception is raised if there is any problem, but details of error is written to Logger log
+    /// No exception is raised if there is any problem, but details of error is written to TeamControlium.Utilities.Logger log
     /// </remarks>
     static public void WriteTextToFile(String Filename, boolean AutoVersion, String Text)
     {

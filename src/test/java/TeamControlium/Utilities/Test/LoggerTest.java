@@ -1,3 +1,7 @@
+package TeamControlium.Utilities.Test;
+
+import TeamControlium.Utilities.Logger;
+
 import java.io.ByteArrayOutputStream;
 import java.io.FileDescriptor;
 import java.io.FileOutputStream;
@@ -25,7 +29,7 @@ class LoggerTest {
         Logger.setLoggingLevel(Logger.LogLevels.TestInformation);                   // Set the logging level
         Logger.WriteLine(Logger.LogLevels.TestInformation,testText); //  and write a line to the log...
 
-        assertTrue(testOutput.endsWith(testText),String.format("Verify Logger output line <%s> ends with test-text <%s>",testOutput,testText));
+        assertTrue(testOutput.endsWith(testText),String.format("Verify TeamControlium.Utilities.Logger output line <%s> ends with test-text <%s>",testOutput,testText));
     }
 
     @org.junit.jupiter.api.Test
@@ -38,7 +42,7 @@ class LoggerTest {
         Logger.setLoggingLevel(Logger.LogLevels.TestInformation);                     // Set the logging level
         Logger.WriteLine(Logger.LogLevels.TestInformation,"Arbitary text"); //  and write a line to the log...
 
-        assertTrue(testOutput.contains(testText),String.format("Verify Logger output line <%s> contains caller details <%s>",testOutput,testText));
+        assertTrue(testOutput.contains(testText),String.format("Verify TeamControlium.Utilities.Logger output line <%s> contains caller details <%s>",testOutput,testText));
     }
 
     @org.junit.jupiter.api.Test
@@ -52,12 +56,12 @@ class LoggerTest {
         Logger.WriteLine(Logger.LogLevels.TestInformation,testText);                //  and write a line to the log...
         String stdoutReceivedMessages = baos.toString();
         System.setOut(new PrintStream(new FileOutputStream(FileDescriptor.out)));
-        assertTrue(stdoutReceivedMessages.endsWith(testText+"\r\n"),String.format("Verify Logger output line to stdout <%s> ends with test-text <%s>",stdoutReceivedMessages,testText));
+        assertTrue(stdoutReceivedMessages.endsWith(testText+"\r\n"),String.format("Verify TeamControlium.Utilities.Logger output line to stdout <%s> ends with test-text <%s>",stdoutReceivedMessages,testText));
 
     }
 
     ///
-    /// When wired up to Logger TestToolLog delegate receives logger output.
+    /// When wired up to TeamControlium.Utilities.Logger TestToolLog delegate receives logger output.
     ///
     private void OutputReceiver(String line) {
         testOutput = line;

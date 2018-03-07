@@ -1,3 +1,5 @@
+package TeamControlium.Utilities;
+
 import org.apache.commons.lang.StringUtils;
 
 import java.text.ParseException;
