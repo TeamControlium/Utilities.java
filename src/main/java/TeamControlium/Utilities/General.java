@@ -1,11 +1,8 @@
+package TeamControlium.Utilities;
+
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
-import javax.swing.text.html.HTMLDocument;
-import javax.swing.text.html.HTMLEditorKit;
-import javax.swing.text.html.parser.ParserDelegator;
-import java.io.Reader;
-import java.io.StringReader;
 import java.util.Objects;
 import java.util.regex.Pattern;
 
