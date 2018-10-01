@@ -6,13 +6,14 @@
     </artifacts-to-build>
   </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/TeamControlium/Utilities/Detokenizer.java" line="192" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/TeamControlium/Utilities/Detokenizer.java" line="203" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da517355-2e96-47fd-86c7-79d017746b11" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/TeamControlium_Utilities.xml" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TeamControlium/Utilities/TestData.java" afterPath="$PROJECT_DIR$/src/main/java/TeamControlium/Utilities/TestData.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/TeamControlium/Utilities/Detokenizer.java" afterPath="$PROJECT_DIR$/src/main/java/TeamControlium/Utilities/Detokenizer.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TeamControlium/Utilities/Test/DetokenizerTest.java" afterPath="$PROJECT_DIR$/src/test/java/TeamControlium/Utilities/Test/DetokenizerTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -28,12 +29,12 @@
       <file leaf-file-name="Detokenizer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/TeamControlium/Utilities/Detokenizer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="39" column="2" lean-forward="false" selection-start-line="39" selection-start-column="2" selection-end-line="39" selection-end-column="2" />
+            <state relative-caret-position="255">
+              <caret line="188" column="13" lean-forward="true" selection-start-line="188" selection-start-column="13" selection-end-line="188" selection-end-column="13" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="method#ProcessTokensInString#0;class#Detokenizer#0" expanded="false" />
                 <element signature="method#ProcessToken#0;class#Detokenizer#0" expanded="false" />
-                <element signature="method#DoRandomToken#0;class#Detokenizer#0" expanded="false" />
                 <element signature="method#DoRandomFloat#0;class#Detokenizer#0" expanded="false" />
                 <element signature="method#DoRandomFloat#1;class#Detokenizer#0" expanded="false" />
                 <element signature="method#DoRandomDate#0;class#Detokenizer#0" expanded="false" />
@@ -41,8 +42,30 @@
                 <element signature="method#DoDateToken#0;class#Detokenizer#0" expanded="false" />
                 <element signature="method#DoFinancialYearToken#0;class#Detokenizer#0" expanded="false" />
                 <element signature="method#getDateOffset#0;class#Detokenizer#0" expanded="false" />
-                <element signature="method#dateToCalendar#0;class#Detokenizer#0" expanded="false" />
-                <element signature="method#tryParseDate#0;class#Detokenizer#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DetokenizerTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/TeamControlium/Utilities/Test/DetokenizerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="37" column="5" lean-forward="true" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+              <folding>
+                <element signature="method#VerifyTodaysDateToken#0;class#DetokenizerTest#0" expanded="false" />
+                <element signature="method#VerifyYesterdaysDateToken#0;class#DetokenizerTest#0" expanded="false" />
+                <element signature="method#VerifyRandomDateToken#0;class#DetokenizerTest#0" expanded="false" />
+                <element signature="method#VerifyRandomDateTokenEpoch#0;class#DetokenizerTest#0" expanded="false" />
+                <element signature="method#VerifyRandomDigits#0;class#DetokenizerTest#0" expanded="false" />
+                <element signature="method#VerifyRandomLetters#0;class#DetokenizerTest#0" expanded="false" />
+                <element signature="method#VerifyRandomUppercaseLetters#0;class#DetokenizerTest#0" expanded="false" />
+                <element signature="method#VerifyRandomLowercaseLetters#0;class#DetokenizerTest#0" expanded="false" />
+                <element signature="method#VerifyRandomSpecificCharacters#0;class#DetokenizerTest#0" expanded="false" />
+                <element signature="method#VerifyNestedTokens#0;class#DetokenizerTest#0" expanded="false" />
+                <element signature="method#CustomOverride#0;class#DetokenizerTest#0" expanded="false" />
+                <element signature="method#VerifyCustomOverride#0;class#DetokenizerTest#0" expanded="false" />
+                <element signature="method#VerifyTempCustomOverride#0;class#DetokenizerTest#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -61,7 +84,7 @@
       <file leaf-file-name="TestData.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/TeamControlium/Utilities/TestData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
+            <state relative-caret-position="901">
               <caret line="63" column="5" lean-forward="false" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
               <folding>
                 <element signature="method#setItem#0;class#TestData#0" expanded="false" />
@@ -114,11 +137,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
-              <caret line="22" column="15" lean-forward="true" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
+              <caret line="22" column="15" lean-forward="false" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -171,13 +194,14 @@
         <option value="$PROJECT_DIR$/src/test/java/GeneralTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Detokenizer.java" />
         <option value="$PROJECT_DIR$/src/test/java/DetokenizerTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/TeamControlium/Utilities/Detokenizer.java" />
         <option value="$PROJECT_DIR$/src/test/java/TeamControlium/Utilities/Test/TestDataTest.java" />
         <option value="$USER_HOME$/.m2/settings.xml" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/ide/ide-scripting.js" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/jshell/jshell_console.snippet" />
         <option value="$PROJECT_DIR$/src/main/java/TeamControlium/Utilities/TestData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/TeamControlium/Utilities/Detokenizer.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TeamControlium/Utilities/Test/DetokenizerTest.java" />
       </list>
     </option>
   </component>
@@ -238,6 +262,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -245,18 +270,64 @@
               <item name="Utilities.java" type="b2602c69:ProjectViewProjectNode" />
               <item name="Utilities.java" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Utilities.java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Utilities.java" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Utilities.java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Utilities.java" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Utilities.java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Utilities.java" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Utilities.java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Utilities.java" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Utilities" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Utilities.java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Utilities.java" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Utilities.java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Utilities.java" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Utilities.java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Utilities.java" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Test" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.33908045" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.ignored.files" />
@@ -283,7 +354,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TeamControlium.Utilities.Test in utilities">
+  <component name="RunManager" selected="JUnit.DetokenizerTest">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -305,26 +376,6 @@
       <module name="" />
       <envs />
     </configuration>
-    <configuration name="All in utilities" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="utilities" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="package" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
     <configuration name="DetokenizerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="utilities" />
@@ -345,14 +396,19 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="DetokenizerTest.VerifyRandomLetters" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <configuration name="DetokenizerTest.VerifyNestedTokens" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="TeamControlium.Utilities.Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <module name="utilities" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="TeamControlium.Utilities.Test" />
       <option name="MAIN_CLASS_NAME" value="TeamControlium.Utilities.Test.DetokenizerTest" />
-      <option name="METHOD_NAME" value="VerifyRandomLetters" />
+      <option name="METHOD_NAME" value="VerifyNestedTokens" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -365,14 +421,44 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="DetokenizerTest.VerifyTempCustomOverride" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <configuration name="DetokenizerTest.VerifyRandomDateTokenEpoch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="TeamControlium.Utilities.Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <module name="utilities" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="TeamControlium.Utilities.Test" />
       <option name="MAIN_CLASS_NAME" value="TeamControlium.Utilities.Test.DetokenizerTest" />
-      <option name="METHOD_NAME" value="VerifyTempCustomOverride" />
+      <option name="METHOD_NAME" value="VerifyRandomDateTokenEpoch" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="DetokenizerTest.VerifyTodaysDateTokenEpoch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="TeamControlium.Utilities.Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="utilities" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="TeamControlium.Utilities.Test" />
+      <option name="MAIN_CLASS_NAME" value="TeamControlium.Utilities.Test.DetokenizerTest" />
+      <option name="METHOD_NAME" value="VerifyTodaysDateTokenEpoch" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -472,18 +558,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.DetokenizerTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.DetokenizerTest.VerifyTempCustomOverride" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.All in utilities" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.DetokenizerTest.VerifyRandomLetters" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.TeamControlium.Utilities.Test in utilities" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.TeamControlium.Utilities.Test in utilities" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.DetokenizerTest.VerifyNestedTokens" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.DetokenizerTest.VerifyRandomDateTokenEpoch" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.DetokenizerTest.VerifyTodaysDateTokenEpoch" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.TeamControlium.Utilities.Test in utilities" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.DetokenizerTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.All in utilities" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.DetokenizerTest.VerifyRandomLetters" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.DetokenizerTest.VerifyTempCustomOverride" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.DetokenizerTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.DetokenizerTest.VerifyTodaysDateTokenEpoch" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.DetokenizerTest.VerifyRandomDateTokenEpoch" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.DetokenizerTest.VerifyNestedTokens" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.TeamControlium.Utilities.Test in utilities" />
       </list>
     </recent_temporary>
   </component>
@@ -561,26 +647,20 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_utilities - 2018.03.08 at 05h 03m 49s.xml">
-      <configuration name="All in utilities" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_utilities - 2018.03.08 at 05h 09m 59s.xml">
-      <configuration name="All in utilities" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_utilities - 2018.03.08 at 05h 10m 55s.xml">
-      <configuration name="All in utilities" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DetokenizerTest - 2018.03.08 at 06h 18m 45s.xml">
+    <history-entry file="DetokenizerTest - 2018.10.01 at 14h 02m 14s.xml">
       <configuration name="DetokenizerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DetokenizerTest_VerifyCustomOverride - 2018.03.07 at 07h 29m 26s.xml">
-      <configuration name="DetokenizerTest.VerifyCustomOverride" configurationId="JUnit" />
+    <history-entry file="DetokenizerTest_VerifyNestedTokens - 2018.10.01 at 13h 28m 19s.xml">
+      <configuration name="DetokenizerTest.VerifyNestedTokens" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DetokenizerTest_VerifyRandomLetters - 2018.03.08 at 05h 01m 41s.xml">
-      <configuration name="DetokenizerTest.VerifyRandomLetters" configurationId="JUnit" />
+    <history-entry file="DetokenizerTest_VerifyNestedTokens - 2018.10.01 at 13h 28m 32s.xml">
+      <configuration name="DetokenizerTest.VerifyNestedTokens" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DetokenizerTest_VerifyTempCustomOverride - 2018.03.07 at 07h 31m 28s.xml">
-      <configuration name="DetokenizerTest.VerifyTempCustomOverride" configurationId="JUnit" />
+    <history-entry file="DetokenizerTest_VerifyRandomDateTokenEpoch - 2018.10.01 at 13h 52m 45s.xml">
+      <configuration name="DetokenizerTest.VerifyRandomDateTokenEpoch" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DetokenizerTest_VerifyRandomDateTokenEpoch - 2018.10.01 at 13h 53m 54s.xml">
+      <configuration name="DetokenizerTest.VerifyRandomDateTokenEpoch" configurationId="JUnit" />
     </history-entry>
     <history-entry file="DetokenizerTest_VerifyTempCustomOverride - 2018.03.07 at 07h 32m 11s.xml">
       <configuration name="DetokenizerTest.VerifyTempCustomOverride" configurationId="JUnit" />
@@ -588,22 +668,29 @@
     <history-entry file="DetokenizerTest_VerifyTempCustomOverride - 2018.03.07 at 07h 32m 45s.xml">
       <configuration name="DetokenizerTest.VerifyTempCustomOverride" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="DetokenizerTest_VerifyTodaysDateTokenEpoch - 2018.10.01 at 14h 01m 42s.xml">
+      <configuration name="DetokenizerTest.VerifyTodaysDateTokenEpoch" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DetokenizerTest_VerifyTodaysDateTokenEpoch - 2018.10.01 at 14h 02m 02s.xml">
+      <configuration name="DetokenizerTest.VerifyTodaysDateTokenEpoch" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="TeamControlium_Utilities_Test_in_utilities - 2018.03.08 at 06h 20m 52s.xml">
       <configuration name="TeamControlium.Utilities.Test in utilities" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="786" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25023517" sideWeight="0.49791667" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32791728" sideWeight="0.38854167" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3283161" sideWeight="0.39635417" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23697917" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.61145836" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283161" sideWeight="0.60364586" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -613,13 +700,12 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39916405" sideWeight="0.49791667" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39887112" sideWeight="0.49583334" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2507837" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.49583334" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -690,7 +776,7 @@
           <option name="timeStamp" value="43" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="54" />
+      <option name="time" value="58" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -943,13 +1029,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/LICENSE" />
     <entry file="file://$PROJECT_DIR$/../Controlium.java/Controlium.java.iml" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/idea.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/idea.properties" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -968,17 +1048,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="20" column="19" lean-forward="false" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TeamControlium/Utilities/Test/DetokenizerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="13" column="6" lean-forward="false" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-          <folding>
-            <element signature="method#VerifyYesterdaysDateToken#0;class#DetokenizerTest#0" expanded="false" />
-            <element signature="method#VerifyRandomDateToken#0;class#DetokenizerTest#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1018,49 +1087,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.m2/settings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="11" lean-forward="true" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/ide/ide-scripting.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/jshell/jshell_console.snippet">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/TeamControlium/Utilities/Detokenizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="39" column="2" lean-forward="false" selection-start-line="39" selection-start-column="2" selection-end-line="39" selection-end-column="2" />
-          <folding>
-            <element signature="method#ProcessTokensInString#0;class#Detokenizer#0" expanded="false" />
-            <element signature="method#ProcessToken#0;class#Detokenizer#0" expanded="false" />
-            <element signature="method#DoRandomToken#0;class#Detokenizer#0" expanded="false" />
-            <element signature="method#DoRandomFloat#0;class#Detokenizer#0" expanded="false" />
-            <element signature="method#DoRandomFloat#1;class#Detokenizer#0" expanded="false" />
-            <element signature="method#DoRandomDate#0;class#Detokenizer#0" expanded="false" />
-            <element signature="method#DoRandomDate#1;class#Detokenizer#0" expanded="false" />
-            <element signature="method#DoDateToken#0;class#Detokenizer#0" expanded="false" />
-            <element signature="method#DoFinancialYearToken#0;class#Detokenizer#0" expanded="false" />
-            <element signature="method#getDateOffset#0;class#Detokenizer#0" expanded="false" />
-            <element signature="method#dateToCalendar#0;class#Detokenizer#0" expanded="false" />
-            <element signature="method#tryParseDate#0;class#Detokenizer#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/.m2/settings.xml" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/ide/ide-scripting.js" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/jshell/jshell_console.snippet" />
     <entry file="file://$PROJECT_DIR$/src/main/java/TeamControlium/Utilities/TestArguments.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1071,7 +1100,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/TeamControlium/Utilities/TestData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
+        <state relative-caret-position="901">
           <caret line="63" column="5" lean-forward="false" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
           <folding>
             <element signature="method#setItem#0;class#TestData#0" expanded="false" />
@@ -1082,8 +1111,49 @@
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
-          <caret line="22" column="15" lean-forward="true" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
+          <caret line="22" column="15" lean-forward="false" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/TeamControlium/Utilities/Detokenizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="188" column="13" lean-forward="true" selection-start-line="188" selection-start-column="13" selection-end-line="188" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#ProcessTokensInString#0;class#Detokenizer#0" expanded="false" />
+            <element signature="method#ProcessToken#0;class#Detokenizer#0" expanded="false" />
+            <element signature="method#DoRandomFloat#0;class#Detokenizer#0" expanded="false" />
+            <element signature="method#DoRandomFloat#1;class#Detokenizer#0" expanded="false" />
+            <element signature="method#DoRandomDate#0;class#Detokenizer#0" expanded="false" />
+            <element signature="method#DoRandomDate#1;class#Detokenizer#0" expanded="false" />
+            <element signature="method#DoDateToken#0;class#Detokenizer#0" expanded="false" />
+            <element signature="method#DoFinancialYearToken#0;class#Detokenizer#0" expanded="false" />
+            <element signature="method#getDateOffset#0;class#Detokenizer#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TeamControlium/Utilities/Test/DetokenizerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="37" column="5" lean-forward="true" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+          <folding>
+            <element signature="method#VerifyTodaysDateToken#0;class#DetokenizerTest#0" expanded="false" />
+            <element signature="method#VerifyYesterdaysDateToken#0;class#DetokenizerTest#0" expanded="false" />
+            <element signature="method#VerifyRandomDateToken#0;class#DetokenizerTest#0" expanded="false" />
+            <element signature="method#VerifyRandomDateTokenEpoch#0;class#DetokenizerTest#0" expanded="false" />
+            <element signature="method#VerifyRandomDigits#0;class#DetokenizerTest#0" expanded="false" />
+            <element signature="method#VerifyRandomLetters#0;class#DetokenizerTest#0" expanded="false" />
+            <element signature="method#VerifyRandomUppercaseLetters#0;class#DetokenizerTest#0" expanded="false" />
+            <element signature="method#VerifyRandomLowercaseLetters#0;class#DetokenizerTest#0" expanded="false" />
+            <element signature="method#VerifyRandomSpecificCharacters#0;class#DetokenizerTest#0" expanded="false" />
+            <element signature="method#VerifyNestedTokens#0;class#DetokenizerTest#0" expanded="false" />
+            <element signature="method#CustomOverride#0;class#DetokenizerTest#0" expanded="false" />
+            <element signature="method#VerifyCustomOverride#0;class#DetokenizerTest#0" expanded="false" />
+            <element signature="method#VerifyTempCustomOverride#0;class#DetokenizerTest#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1129,7 +1199,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>9.0</last-edited>
+          <last-edited>10.0</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

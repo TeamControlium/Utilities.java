@@ -7,8 +7,6 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.function.BiFunction;
-import java.util.function.Consumer;
-import java.util.function.Function;
 import java.util.regex.Pattern;
 
 //
@@ -39,6 +37,13 @@ import java.util.regex.Pattern;
 // EG. 239878405
 //
 //
+
+
+
+
+
+
+
 
 public class Detokenizer {
     private static final char tokenStartChar = '{';
@@ -178,7 +183,13 @@ public class Detokenizer {
         String verb = typeAndLengthOrFormat[0].toLowerCase().trim();
 
         if (verb.startsWith("date(")) {
-            result = new SimpleDateFormat(typeAndLengthOrFormat[1]).format(DoRandomDate(verb.substring(verb.indexOf('(') + 1, verb.length() - 1)));
+            Date dt = DoRandomDate(verb.substring(verb.indexOf('(') + 1, verb.length() - 1));
+            if (typeAndLengthOrFormat[1].trim().equalsIgnoreCase("epoch")) {
+                result = Long.toString(dt.getTime());
+            }
+            else {
+                result = new SimpleDateFormat(typeAndLengthOrFormat[1]).format(dt);
+            }
         } else if (verb.startsWith("float(")) {
             result = String.format(typeAndLengthOrFormat[1], DoRandomFloat(verb.substring(verb.indexOf('(') + 1, verb.length() - 1)));
         } else {
@@ -329,8 +340,12 @@ public class Detokenizer {
                 }
             }
         }
-        SimpleDateFormat dateFormat = new SimpleDateFormat(offsetAndFormat[1]);
-        return dateFormat.format(dt);
+        if (offsetAndFormat[1].trim().equalsIgnoreCase("epoch")) {
+            return Long.toString(dt.getTime());
+        } else {
+            SimpleDateFormat dateFormat = new SimpleDateFormat(offsetAndFormat[1]);
+            return dateFormat.format(dt);
+        }
     }
     private static String DoFinancialYearToken(String delimiter, String DateToWorkFromAndFormat, boolean Start) throws Exception {
         String financialYearStart = "01/07";
