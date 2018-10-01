@@ -38,6 +38,23 @@ class DetokenizerTest {
     }
 
     @org.junit.jupiter.api.Test
+    void VerifyTodaysDateTokenEpoch() {
+        String detokenised="<Not Set>";
+        try {
+            detokenised = Detokenizer.ProcessTokensInString("{date;today;epoch}");
+        }
+        catch (Exception ex) {
+            assertTrue(false,"Exception calling [TeamControlium.Utilities.Detokenizer.ProcessTokensInString]: " + ex);
+        }
+
+        long timeNow = new Date().getTime();
+        long testNow = Long.parseLong(detokenised);
+
+        assertTrue(testNow>=(timeNow-1000) && testNow<=(timeNow+1000),"Date returned by Detokeniser is within 1 second of current time in epoch");
+    }
+
+
+    @org.junit.jupiter.api.Test
     void VerifyYesterdaysDateToken() {
         String detokenised="<Not Set>";
         try {
@@ -91,6 +108,43 @@ class DetokenizerTest {
         assertTrue((!returnedDate.before(startDateDate)) && !returnedDate.after(endDateDate),"Verify returned date from token {random;date("+startDate+","+endDate+");dd/MM/yyyy} is not outside the minimum and maximum dates");
 
     }
+
+    @org.junit.jupiter.api.Test
+    void VerifyRandomDateTokenEpoch() {
+        String detokenised="<Not Set>";
+        String startDate = "01-01-1975";
+        String endDate = "31-12-1975";
+        SimpleDateFormat inputDateFormat = new SimpleDateFormat("dd-MM-yyyy");
+        long startDateEpoch=-1l;
+        long endDateEpoch=-1l;
+
+        try {
+            detokenised = Detokenizer.ProcessTokensInString("{random;date(" + startDate + "," + endDate + ");epoch}");
+        }
+        catch (Exception ex) {
+            assertTrue(false,"Exception calling [TeamControlium.Utilities.Detokenizer.ProcessTokensInString]: " + ex);
+        }
+
+        long returnedDateEpoch=-1l;
+        try {
+            returnedDateEpoch = Long.parseLong(detokenised);
+        }
+        catch (Exception ex) {
+            assertTrue(false,"Exception parsing Long [TeamControlium.Utilities.Detokenizer.ProcessTokensInString] returned date [" + detokenised + "]: " + ex);
+        }
+
+        try {
+            startDateEpoch = inputDateFormat.parse(startDate).getTime();
+            endDateEpoch = inputDateFormat.parse(endDate).getTime();
+        }
+        catch (Exception ex) {
+            assertTrue(false, "Test error parsing start or end dates!");
+        }
+
+        assertTrue(returnedDateEpoch>=startDateEpoch && returnedDateEpoch<=endDateEpoch,"Verify returned date from token {random;date("+startDate+","+endDate+");epoch} is not outside the minimum and maximum dates");
+
+    }
+
 
     @org.junit.jupiter.api.Test
     void VerifyRandomDigits() {
