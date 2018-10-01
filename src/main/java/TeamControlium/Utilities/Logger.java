@@ -40,6 +40,37 @@ public final class Logger {
     private LogLevels _LoggingLevel;
     static public LogLevels getLoggingLevel() { if (_Logger==null) { _Logger = new Logger(); } return _Logger._LoggingLevel;}
     static public void setLoggingLevel(LogLevels loggingLevel) { if (_Logger==null) { _Logger = new Logger(); } _Logger._LoggingLevel = loggingLevel;}
+    static public void setLoggingLevel(String loggingLevel) {
+        if (loggingLevel==null || loggingLevel.isEmpty()) {
+            Logger.WriteLine(LogLevels.Error,"Logging level is blank or null!  Defaulting to verbose!");
+        }
+        else {
+            switch (loggingLevel.trim().toLowerCase()) {
+                case "frameworkdebug":
+                case "verbose":
+                    setLoggingLevel(LogLevels.FrameworkDebug);
+                    break;
+                case "frameworkinformation":
+                case "frameworkinfo":
+                    setLoggingLevel(LogLevels.FrameworkInformation);
+                    break;
+                case "testdebug":
+                    setLoggingLevel(LogLevels.TestDebug);
+                    break;
+                case "testinformation":
+                case "testinfo":
+                    setLoggingLevel(LogLevels.TestInformation);
+                    break;
+                case "error":
+                case "minimum":
+                    setLoggingLevel(LogLevels.Error);
+                    break;
+                default:
+                    setLoggingLevel(LogLevels.FrameworkDebug);
+                    Logger.WriteLine(LogLevels.Error, String.format("Unknown logging level [%s].  Defaulting to verbose!", loggingLevel));
+            }
+        }
+    }
 
     /// <summary>
     /// Defines where log lines are written to.
