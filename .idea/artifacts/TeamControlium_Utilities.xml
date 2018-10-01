@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="TeamControlium.Utilities">
+    <output-path>$PROJECT_DIR$/out/artifacts/TeamControlium_Utilities</output-path>
+    <root id="archive" name="TeamControlium.Utilities.jar">
+      <element id="module-output" name="utilities" />
+    </root>
+  </artifact>
+</component>
