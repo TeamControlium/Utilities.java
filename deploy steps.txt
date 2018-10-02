@@ -4,7 +4,7 @@ DO NOT CHANGE VERSION in pom.xml file
 
 2. From command line; mvn versions:set -DnewVersion=n.n.n
 
-3. From command line; mvn clean deploy -P ossrh
+3. From command line; mvn clean deploy // -P ossrh
 
 
 ossrh ties in with ~/.m2/settings.xml - <profile>
