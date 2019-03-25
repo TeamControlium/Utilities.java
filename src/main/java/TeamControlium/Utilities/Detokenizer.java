@@ -86,7 +86,7 @@ public class Detokenizer {
             //
             while (!foundTokenEnd && endIndex < stringWithTokens.length()) {
                 if ((stringWithTokens.charAt(endIndex) == tokenStartChar) &&
-                        !((startIndex < stringWithTokens.length() - 1) && (stringWithTokens.charAt(startIndex + 1) == tokenStartChar))) {
+                        !((startIndex < stringWithTokens.length() - 1) && (stringWithTokens.charAt(endIndex + 1) == tokenStartChar))) {
                     //
                     // Another start token (and it is NOT a dounble!!!!)  We have nested tokens by golly.
                     // So, start the process again, but from the new start of the nested token. Hah, this
